@@ -3,5 +3,5 @@
 #### To install SQLite with support for built-in mathematical SQL functions
 
 ```
-install.sh
+./install.sh
 ```
