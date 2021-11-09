@@ -5,3 +5,9 @@
 ```
 ./install.sh
 ```
+
+#### To run experiments where we vary N and K
+
+```
+./experiment-varyN-varyK.sh
+```
