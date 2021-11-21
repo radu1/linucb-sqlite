@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt-get install python3-pip
+pip3 install numpy
+
 # https://www.sqlite.org/download.html
 # https://www.sqlite.org/howtocompile.html
 # https://www.sqlite.org/lang_mathfunc.html

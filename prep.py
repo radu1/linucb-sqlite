@@ -2,20 +2,16 @@ import sys
 from numpy import asarray, dot, identity, outer
 from numpy.linalg import inv
 
-
 N = int(sys.argv[1])
 K = int(sys.argv[2])
+d = int(sys.argv[3])
 
+# x = the arms = a subset of movies
+x = [list(map(float, line.strip().split())) for line in open("linucb-movielens/Movies%d.txt" % (d)).readlines()[:K]]
 
-# x = the arms = a subset of movies from
-# https://github.com/anatole33/LinUCB-secure/blob/master/extract_movie_lens/Movies3.txt 
-x = [list(map(float, line.strip().split())) for line in open("linucb-movielens/Movies3.txt").readlines()[:K]]
+# theta = a user
+theta = list(map(float, open("linucb-movielens/Users%d.txt" % (d)).readlines()[0].strip().split()))
 
-# theta = A random user from
-# https://github.com/anatole33/LinUCB-secure/blob/master/extract_movie_lens/Users3.txt
-theta = [0.71956295, 0.14697917, 0.2017453]
-
-d = len(theta)
 gamma = 0.01
 delta = 0.001
 
@@ -77,6 +73,3 @@ matrix_to_sql(f, x, "x");
 matrix_to_sql(f, A_inv, "A_inv");
 
 f.close()
-
-
-

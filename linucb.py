@@ -27,6 +27,7 @@ b = r * asarray(x[i])
 # Exploration-Exploitation: At each round, pull an arm and update variables
 for t in range(1, N):
   theta_hat = matmul(A_inv, b)
+  # the base of Python math.log is by default 'e' (just as ln from SQLite)
   omega = R * sqrt(d * log((1+t*L*L/gamma)/delta)) + sqrt(gamma)*log(t)
   
   B_max = None

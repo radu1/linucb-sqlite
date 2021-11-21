@@ -1,13 +1,15 @@
 ## Implementing Linear Bandits in Off-the-Shelf SQLite
 
-#### To install SQLite with support for built-in mathematical SQL functions
+#### To install Python with NumPy, and SQLite with support for built-in mathematical SQL functions
 
 ```
 ./install.sh
 ```
 
-#### To run experiments where we vary N and K
+#### To reproduce the entire experimental workflow producing all plots from the paper
 
 ```
-./experiment-varyN-varyK.sh
+./script.sh
 ```
+
+The aforementioned scripts have been successfully tested on `Ubuntu 20.04.3`.
