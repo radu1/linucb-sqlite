@@ -1,6 +1,9 @@
 import sys
+import time
 from numpy import asarray, dot, identity, outer
 from numpy.linalg import inv
+
+start = time.time()
 
 N = int(sys.argv[1])
 K = int(sys.argv[2])
@@ -31,6 +34,9 @@ i = 0
 A = gamma * identity(d) + outer(x[i], x[i])
 A_inv = inv(A).tolist()
 
+t_prep_commun = time.time() - start
+start = time.time()
+
 f = open("data.py", "w")
 f.write ("x = " + str(x) + "\n")
 f.write ("d = " + str(d) + "\n")
@@ -44,6 +50,8 @@ f.write ("L = " + str(L) + "\n")
 f.write ("A_inv = " + str(A_inv) + "\n")
 f.close()
 
+t_prep_P = time.time() - start
+start = time.time()
 
 f = open("data.sql", "w")
 f.write("insert into input values (%d, %d, %d, %f, %f, %f, %f);\n\n" % (d, N, K, gamma, delta, R, L))
@@ -73,3 +81,7 @@ matrix_to_sql(f, x, "x");
 matrix_to_sql(f, A_inv, "A_inv");
 
 f.close()
+
+t_prep_S = time.time() - start
+
+# print ("Preprocessing time: Commun: %f; P: %f; S: %f" % (t_prep_commun, t_prep_P, t_prep_S))
