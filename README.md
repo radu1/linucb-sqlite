@@ -2,7 +2,9 @@
 
 Radu Ciucanu, Marta Soare, Sihem Amer-Yahia
 
-EDBT 2022: International Conference on Extending Database Technology
+EDBT 2022: International Conference on Extending Database Technology 
+
+[Talk](https://www.youtube.com/watch?v=4G_93RLBQSo)
 
 
 #### To install Python with NumPy, and SQLite with support for built-in mathematical SQL functions
