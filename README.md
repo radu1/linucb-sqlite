@@ -1,9 +1,8 @@
-## Implementing Linear Bandits in Off-the-Shelf SQLite
+## [Implementing Linear Bandits in Off-the-Shelf SQLite](http://openproceedings.org/2022/conf/edbt/paper-93.pdf)
 
 Radu Ciucanu, Marta Soare, Sihem Amer-Yahia
 
-EDBT 2022: International Conference on Extending Database Technology, Short paper, Accepted (to appear), [Preprint](https://lig-membres.imag.fr/ciucanu/preprints/CSA22.pdf)
-
+EDBT 2022: International Conference on Extending Database Technology
 
 
 #### To install Python with NumPy, and SQLite with support for built-in mathematical SQL functions
@@ -28,6 +27,7 @@ The aforementioned scripts have been successfully tested on `Ubuntu 20.04.3`.
   title     = {{Implementing Linear Bandits in Off-the-Shelf SQLite}},
   booktitle = {International Conference on Extending Database Technology (EDBT)},
   year      = {2022},
-  note      = {Short paper, Accepted (to appear)}
+  pages     = {388--392},
+  note      = {\url{http://openproceedings.org/2022/conf/edbt/paper-93.pdf}}
 }
 ```
